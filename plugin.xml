@@ -7,5 +7,32 @@
             class="net.skweez.androidloc.AndroidLocOverlay">
       </overlay>
    </extension>
+   <extension
+         point="org.eclipse.ui.perspectives">
+      <perspective
+            class="net.skweez.androidloc.Perspective"
+            id="net.skweez.androidloc.perspective"
+            name="Andloc Perspective">
+      </perspective>
+   </extension>
+   <extension
+         id="aplication"
+         point="org.eclipse.core.runtime.applications">
+      <application
+            cardinality="singleton-global"
+            thread="main"
+            visible="true">
+         <run
+               class="net.skweez.androidloc.Application">
+         </run>
+      </application>
+   </extension>
+   <extension
+         point="org.eclipse.core.runtime.products">
+      <product
+            application="net.skweez.androidloc.application"
+            name="AndroidLoc">
+      </product>
+   </extension>
 
 </plugin>
