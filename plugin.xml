@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="net.skweez.geoclipse.Overlay">
+      <overlay
+            class="net.skweez.androidloc.AndroidLocOverlay">
+      </overlay>
+   </extension>
+
+</plugin>
