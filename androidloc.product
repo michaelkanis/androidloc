@@ -3,7 +3,6 @@
 
 <product application="net.skweez.androidloc.aplication" useFeatures="false" includeLaunchers="true">
 
-
    <configIni use="default">
    </configIni>
 
@@ -15,7 +14,6 @@
 
    <windowImages/>
 
-
    <launcher>
       <solaris/>
       <win useIco="false">
@@ -23,14 +21,11 @@
       </win>
    </launcher>
 
-
    <vm>
    </vm>
 
-
    <plugins>
       <plugin id="com.ibm.icu"/>
-      <plugin id="edu.tum.cs.eclipse.commons"/>
       <plugin id="net.skweez.androidloc"/>
       <plugin id="net.skweez.geoclipse"/>
       <plugin id="org.eclipse.compare.core"/>
