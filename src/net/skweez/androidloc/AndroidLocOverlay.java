@@ -1,6 +1,5 @@
 package net.skweez.androidloc;
 
-import java.awt.Point;
 import java.io.DataInputStream;
 import java.io.FileInputStream;
 import java.util.List;
@@ -12,6 +11,7 @@ import net.skweez.geoclipse.map.Projection;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.graphics.Color;
 import org.eclipse.swt.graphics.GC;
+import org.eclipse.swt.graphics.Point;
 import org.eclipse.swt.widgets.FileDialog;
 import org.eclipse.ui.PlatformUI;
 
