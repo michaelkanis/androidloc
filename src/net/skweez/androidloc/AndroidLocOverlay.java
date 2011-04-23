@@ -8,7 +8,6 @@ import java.util.List;
 import net.skweez.geoclipse.map.MapView;
 import net.skweez.geoclipse.map.Overlay;
 import net.skweez.geoclipse.map.Projection;
-import net.skweez.geoclipse.map.tilefactories.ITileFactory;
 
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.graphics.Color;
@@ -58,16 +57,14 @@ public class AndroidLocOverlay extends Overlay {
 	}
 
 	private void drawRecord(GC gc, MapView mapView, Record record) {
-		ITileFactory tileFactory = mapView.getTileFactory();
 		Projection projection = mapView.getProjection();
-
 		Point p = projection.geoToPixel(record.getLocation());
 
 		gc.setBackground(new Color(gc.getDevice(), 255, 100, 0));
 		gc.setForeground(gc.getBackground());
 
 		int diameter = record.getAccuracy();
-		diameter /= tileFactory.getMaximumZoom() - mapView.getZoomLevel() + 1;
+		diameter /= mapView.getMaxZoomLevel() - mapView.getZoomLevel() + 1;
 
 		drawCircle(gc, p.x, p.y, Math.round(diameter));
 	}
