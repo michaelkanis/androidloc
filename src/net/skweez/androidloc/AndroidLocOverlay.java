@@ -1,6 +1,5 @@
 package net.skweez.androidloc;
 
-import java.awt.Dimension;
 import java.awt.Point;
 import java.io.DataInputStream;
 import java.io.FileInputStream;
@@ -62,10 +61,7 @@ public class AndroidLocOverlay extends Overlay {
 		ITileFactory tileFactory = mapView.getTileFactory();
 		Projection projection = mapView.getProjection();
 
-		Dimension dim = tileFactory.getMapSizeInPixels(mapView.getZoomLevel());
-
-		Point p = projection.geoToPixel(record.getLocation(), dim.width,
-				dim.height);
+		Point p = projection.geoToPixel(record.getLocation());
 
 		gc.setBackground(new Color(gc.getDevice(), 255, 100, 0));
 		gc.setForeground(gc.getBackground());
