@@ -11,7 +11,6 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-
 import org.eclipse.core.runtime.Assert;
 
 /**
@@ -54,7 +53,7 @@ public class LocationCacheParser {
 		dbVersion = stream.readUnsignedShort();
 		recordsCount = stream.readUnsignedShort();
 
-		Assert.isTrue(dbVersion == 1);
+		Assert.isTrue(dbVersion == 1, "Not a valid location cache file");
 
 		List<Record> records = new ArrayList<Record>();
 
