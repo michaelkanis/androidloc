@@ -60,9 +60,9 @@ public class AndroidLocOverlay extends Overlay {
 
 	private void drawRecord(GC gc, MapView mapView, Record record) {
 		ITileFactory tileFactory = mapView.getTileFactory();
-		Projection projection = tileFactory.getProjection();
+		Projection projection = mapView.getProjection();
 
-		Dimension dim = tileFactory.getMapSizeInPixels(mapView.getZoom());
+		Dimension dim = tileFactory.getMapSizeInPixels(mapView.getZoomLevel());
 
 		Point p = projection.geoToPixel(record.getLocation(), dim.width,
 				dim.height);
@@ -71,7 +71,7 @@ public class AndroidLocOverlay extends Overlay {
 		gc.setForeground(gc.getBackground());
 
 		int diameter = record.getAccuracy();
-		diameter /= tileFactory.getMaximumZoom() - mapView.getZoom() + 1;
+		diameter /= tileFactory.getMaximumZoom() - mapView.getZoomLevel() + 1;
 
 		drawCircle(gc, p.x, p.y, Math.round(diameter));
 	}
