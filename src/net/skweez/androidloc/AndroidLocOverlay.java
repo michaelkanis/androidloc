@@ -24,11 +24,10 @@ public class AndroidLocOverlay extends Overlay {
 		FileDialog fileDialog = new FileDialog(PlatformUI.getWorkbench()
 				.getActiveWorkbenchWindow().getShell(), SWT.OPEN);
 
-		fileDialog.open();
+		String fileName = fileDialog.open();
 
 		LocationCacheParser parser = new LocationCacheParser();
 
-		String fileName = fileDialog.getFileName();
 		try {
 			FileInputStream fileInputStream = new FileInputStream(fileName);
 			DataInputStream inputStream = new DataInputStream(fileInputStream);
