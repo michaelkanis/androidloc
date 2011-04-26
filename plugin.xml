@@ -2,7 +2,7 @@
 <?eclipse version="3.4"?>
 <plugin>
    <extension
-         point="net.skweez.geoclipse.Overlay">
+         point="net.skweez.geoclipse.overlays">
       <overlay
             class="net.skweez.androidloc.AndroidLocOverlay">
       </overlay>

@@ -42,13 +42,9 @@ public class AndroidLocOverlay extends Overlay {
 
 	/** {@inheritDoc} */
 	@Override
-	public void draw(GC gc, MapView mapView, boolean shadowLayer) {
+	public void draw(GC gc, MapView mapView) {
 
 		if (records == null) {
-			return;
-		}
-
-		if (shadowLayer) {
 			return;
 		}
 
