@@ -19,6 +19,7 @@ public class AndroidLocOverlay extends Overlay {
 
 	private List<Record> records;
 
+	// TODO Do data loading in a thread
 	public AndroidLocOverlay() {
 		FileDialog fileDialog = new FileDialog(PlatformUI.getWorkbench()
 				.getActiveWorkbenchWindow().getShell(), SWT.OPEN);
@@ -57,6 +58,8 @@ public class AndroidLocOverlay extends Overlay {
 	}
 
 	private void drawRecord(GC gc, MapView mapView, Record record) {
+		// TODO Only draw records inside the clipping area
+
 		Projection projection = mapView.getProjection();
 		Point p = projection.geoToPixel(record.getLocation());
 
