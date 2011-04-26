@@ -16,12 +16,9 @@
       </perspective>
    </extension>
    <extension
-         id="aplication"
+         id="application"
          point="org.eclipse.core.runtime.applications">
-      <application
-            cardinality="singleton-global"
-            thread="main"
-            visible="true">
+      <application>
          <run
                class="net.skweez.androidloc.Application">
          </run>
@@ -32,6 +29,18 @@
       <product
             application="net.skweez.androidloc.application"
             name="AndroidLoc">
+      </product>
+   </extension>
+   <extension
+         id="product"
+         point="org.eclipse.core.runtime.products">
+      <product
+            application="net.skweez.androidloc.application"
+            name="AndroidLoc">
+         <property
+               name="appName"
+               value="AndroidLoc">
+         </property>
       </product>
    </extension>
 

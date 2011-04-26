@@ -4,8 +4,7 @@ Bundle-Name: Androidloc
 Bundle-SymbolicName: net.skweez.androidloc;singleton:=true
 Bundle-Version: 1.0.0.20110422
 Bundle-Vendor: Michael Kanis
-Require-Bundle: org.eclipse.core.runtime,
- net.skweez.geoclipse;bundle-version="0.2.0",
- org.eclipse.swt;bundle-version="3.6.2",
- org.eclipse.ui;bundle-version="3.6.2"
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ net.skweez.geoclipse;bundle-version="0.2.0"
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
